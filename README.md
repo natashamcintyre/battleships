@@ -22,10 +22,29 @@ Input | Output
 game.place_ship(['A', 1]) | alert "Ship placed successfully" and game.board = [[1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 game.place_ship(['A', 2]) | game.board = [[0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 game.place_ship(['B', 1]) | [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]]
-game.place_ship(['B', 0]) | Error: "Whoops! Please place your ship on the board!"
 game.place_ship('B1') | Error: "Invalid data entry"
-game.place_ship() | Error: "Please choose a place to put your ship"
+game.place_ship() | Error: "Invalid data entry"
+
+```
+As a player
+So that I can play a more interesting game
+I would like to have a range of ship sizes to choose from
+```
+
+INPUT | OUTPUT
+-|-
+game.choose_ship(1) | game.ship_length = 1
+game.choose_ship(2) | game.ship_length = 2
+game.choose_ship(5) | Error: "Ship length must be between 1 and 4"
+game.choose_ship(0) | Error: "Ship length must be between 1 and 4"
+game.choose_ship(NAN (eg String)) | Error: "Ship length must be between 1 and 4"
+
+
+game.place_ship(['B', 0]) | Error: "Whoops! Please place your ship on the board!"
+
 game.place_ship(..[already selected location]..) | Error: "Ship already there"
+
+
 
 ## User stories
 

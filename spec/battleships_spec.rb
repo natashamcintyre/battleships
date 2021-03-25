@@ -21,4 +21,11 @@ describe Battleships do
       expect{ subject.place_ship('B1') }.to raise_error("Invalid data entry")
     end
   end
+
+  describe '#choose_ship' do
+    it "sets ship_length to 1 when input is 1" do
+      subject.choose_ship(1)
+      expect(subject.ship_length).to eq(1)
+    end
+  end
 end

@@ -1,6 +1,6 @@
 class Battleships
 
-  attr_accessor :board
+  attr_reader :board, :ship_length
 
   def initialize
     @board = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -22,4 +22,7 @@ class Battleships
     "Ship placed successfully"
   end
 
+  def choose_ship(length)
+    @ship_length = 1
+  end
 end
