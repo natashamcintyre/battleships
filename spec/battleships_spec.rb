@@ -27,5 +27,11 @@ describe Battleships do
       subject.choose_ship(1)
       expect(subject.ship_length).to eq(1)
     end
+
+
+    it "sets ship_length to 2 when input is 2" do
+      subject.choose_ship(2)
+      expect(subject.ship_length).to eq(2)
+    end
   end
 end

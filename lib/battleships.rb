@@ -23,6 +23,6 @@ class Battleships
   end
 
   def choose_ship(length)
-    @ship_length = 1
+    @ship_length = length
   end
 end
