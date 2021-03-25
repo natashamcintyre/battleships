@@ -23,6 +23,7 @@ class Battleships
   end
 
   def choose_ship(length)
+    raise "Ship length must be between 1 and 4" if length > 4
     @ship_length = length
   end
 end

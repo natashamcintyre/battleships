@@ -28,10 +28,13 @@ describe Battleships do
       expect(subject.ship_length).to eq(1)
     end
 
-
     it "sets ship_length to 2 when input is 2" do
       subject.choose_ship(2)
       expect(subject.ship_length).to eq(2)
+    end
+
+    it "raises error when input is 5" do
+      expect{ subject.choose_ship(5) }.to raise_error("Ship length must be between 1 and 4")
     end
   end
 end
