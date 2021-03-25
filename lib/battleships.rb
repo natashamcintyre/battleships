@@ -18,9 +18,12 @@ class Battleships
   end
 
   def place_ship(location)
-    raise "Invalid data entry" unless location.is_a?(Array) && location.size == 2
+    raise "Invalid data entry" unless location.is_a?(Array)
+    location.each do |cell|
+      raise "Invalid data entry" unless cell.is_a?(Array) && cell.size == 2
 
-    @board[location[0].ord - 65][location[1] - 1] = 1
+      @board[cell[0].ord - 65][cell[1] - 1] = 1
+    end
     "Ship placed successfully"
   end
 
