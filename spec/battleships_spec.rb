@@ -40,5 +40,9 @@ describe Battleships do
     it "raises error when input is 0" do
       expect{ subject.choose_ship(0) }.to raise_error("Ship length must be an integer between 1 and 4")
     end
+
+    it "raises error when input is 3.5" do
+      expect{ subject.choose_ship(3.5) }.to raise_error("Ship length must be an integer between 1 and 4")
+    end
   end
 end
