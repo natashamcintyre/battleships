@@ -37,7 +37,7 @@ game.choose_ship(1) | game.ship_length = 1
 game.choose_ship(2) | game.ship_length = 2
 game.choose_ship(5) | Error: "Ship length must be between 1 and 4"
 game.choose_ship(0) | Error: "Ship length must be between 1 and 4"
-game.choose_ship(NAN (eg String)) | Error: "Ship length must be between 1 and 4"
+game.choose_ship(Not an integer (eg String/float/empty)) | Error: "Ship length must be between 1 and 4"
 
 
 game.place_ship(['B', 0]) | Error: "Whoops! Please place your ship on the board!"
