@@ -16,5 +16,9 @@ describe Battleships do
       expect(subject.place_ship(['B', 1])).to eq("Ship placed successfully")
       expect(subject.board).to eq([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
     end
+
+    it "returns error when input is 'B1'" do
+      expect{ subject.place_ship('B1') }.to raise_error("Invalid data entry")
+    end
   end
 end
