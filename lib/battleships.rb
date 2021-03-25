@@ -16,7 +16,7 @@ class Battleships
   end
 
   def place_ship(location)
-    @board[0][location[1] - 1] = 1
+    @board[location[0].ord - 65][location[1] - 1] = 1
     "Ship placed successfully"
   end
 
